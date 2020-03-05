@@ -10,7 +10,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-       <!--Personal Style CSS-->
+    <!--Personal Style CSS-->
        <link rel="stylesheet" href="assets/css/style.css">
     
     <!--Link for Google Fonts-->
@@ -33,6 +33,15 @@
     <h1> GifTastic Moods </h1>
         
     <h6> Click on a Mood Button that best describes your mood at this moment. If you don't see your mood, add one that suits you! </h6>
+
+    <button data-mood="Excited"> Excited</button>
+    <button data-mood="Calm"> Calm</button>
+    <button data-mood="Perplexed"> Perplexed</button>
+    <button data-mood="Mind-Blown"> Mind-Blown</button>
+    <button data-mood="Livid"> Livid</button>
+
+    <div id = "gifs-appear-here">
+    </div>
     
         <div class = "row">
             <div class "col-lg-9 container-fluid"> 
@@ -47,7 +56,7 @@
         <label for = "mood-input">Add Your Mood</label>
         <input type= "text" class="form-control col-12" id = "mood-input"><br>
 
-         <!--Trigger Buttons for a new mood to be added-->
+    <!--Trigger Buttons for a new mood to be added-->
         <input class="btn btn-info" id="add-mood" type = "submit" value="Add Your Mood">
     </form>
     </div>

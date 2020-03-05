@@ -4,7 +4,5 @@
 }
 
 body{
-    background-image:url("../images/giftasticmoods.jpg");
-    background-size: cover;
-    z-index: auto;
+    background-color: mediumaquamarine;
 }
