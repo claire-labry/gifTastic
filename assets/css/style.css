@@ -1,0 +1,10 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+    color: black;
+}
+
+body{
+    background-image:url("../images/giftasticmoods.jpg");
+    background-size: cover;
+    z-index: auto;
+}
