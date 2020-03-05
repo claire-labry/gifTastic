@@ -6,3 +6,9 @@
 body{
     background-color: mediumaquamarine;
 }
+
+h1,
+h6{
+    margin-bottom: 50px;
+}
+
