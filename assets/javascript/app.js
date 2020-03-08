@@ -34,6 +34,9 @@ $(document).ready (function(){
                          var rating = results[i].rating;
                          var p = $("<p>").text("Rating: " + rating);
                          var moodImage = $("<img>");
+                
+                        //  a.attr("data-still", moods[i]);
+                        //  a.attr("data-animate", moods[i]);
 
                          console.log(moodImage);
                          console.log(results.length);
@@ -55,8 +58,6 @@ $(document).ready (function(){
                   var a = $("<button>");
                   a.addClass("mood");
                   a.attr("data-name", moods[i]);
-                  a.attr("data-still", moods[i]);
-                  a.attr("data-animate", moods[i]);
                   a.text(moods[i]);
                   $("#mood-view").append(a);
                 }
