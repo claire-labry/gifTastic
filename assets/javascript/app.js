@@ -35,9 +35,11 @@ $(document).ready (function(){
                          var p = $("<p>").text("Rating: " + rating);
                          var moodImage = $("<img>");
                 
-                        //  a.attr("data-still", moods[i]);
-                        //  a.attr("data-animate", moods[i]);
-
+                         moodImage.attr("data-still", results[i].images.fixed_height_still.url);
+                         moodImage.attr("data-animate", results[i].images.fixed_height.url);
+                         moodImage.attr('data-state', 'still');
+                         moodImage.addClass ('animate-gif');
+               
                          console.log(moodImage);
                          console.log(results.length);
                         
