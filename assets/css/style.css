@@ -6,10 +6,31 @@ body {
     background-image: url("../images/giftasticmoods.jpg");
 }
 
+#mood-form{
+    margin-top: 20px;
+}
 
 
-.buttons {
+#mood-view {
     border-radius: 25px;
     border: 2px solid  black;
     padding: 10px;
 }
+
+#button{
+    padding: 20px;
+}
+
+#gifs-appear-here{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    display: table;
+  }
+  
+  /* Clear floats after image containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
