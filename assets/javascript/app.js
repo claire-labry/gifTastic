@@ -8,9 +8,13 @@ $(document).ready (function(){
     
     var moods =  ["Excited", "Calm", "Perplexed", "Mind-Blown", "Livid"];
     
-    var mood = $(this).attr("#data-mood");
+    
+    $(document).on('click', '.mood', function(){
+        
+        var mood = $(this).attr("data-name");
        
-        var queryURL = "https://api.giphy.com/v1/stickers/search?api_key=xad35A896cDISepiqaz8yXBCdntcOXQ9&q="+ mood + "&limit=25&offset=0&rating=G&lang=en&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + mood + "&api_key=xad35A896cDISepiqaz8yXBCdntcOXQ9&limit=10"
+        console.log(mood);
         
         $.ajax({
             url: queryURL,
@@ -21,7 +25,8 @@ $(document).ready (function(){
                 console.log(response);
                  
                 var results = response.data;
-                    $("#gifs-appear-here").empty();   
+                    $("#gifs-appear-here").empty(); 
+                    console.log(results)  
             
                  for (var i = 0; i < results.length; i++){
                      if (results[i].rating !== "r" && results[i].rating !== "pg-13"){
@@ -31,6 +36,7 @@ $(document).ready (function(){
                          var moodImage = $("<img>");
 
                          console.log(moodImage);
+                         console.log(results.length);
                         
                     moodImage.attr("src", results[i].images.fixed_height.url);
                          
@@ -41,8 +47,7 @@ $(document).ready (function(){
                 }
             }
         });
-
-   
+});
             function renderButtons() {
                 $("#mood-view").empty();
         
@@ -50,6 +55,8 @@ $(document).ready (function(){
                   var a = $("<button>");
                   a.addClass("mood");
                   a.attr("data-name", moods[i]);
+                  a.attr("data-still", moods[i]);
+                  a.attr("data-animate", moods[i]);
                   a.text(moods[i]);
                   $("#mood-view").append(a);
                 }
@@ -64,22 +71,22 @@ $(document).ready (function(){
               renderButtons();
     
     
-        // var states = $(this).attr("data-state");
+        var states = $(this).attr("data-state");
     
-        // $('<div>').click(function(){
-        //     var index = parseInt($(this).attr("data-state"));
-        //     var state = states[index];
+        $('<div>').click(function(){
+            var index = parseInt($(this).attr("data-state"));
+            var state = states[index];
     
-        //     $('<div>').text(state);
-        //     if (state === "still"){
-        //         $(this).attr("src", $(this).attr("gif-animate"));
-        //         $(this).attr("data-state", "animate");
-        //     } else{
-        //        $(this).attr("src", $(this).attr("gif-still"));
-        //        $(this).attr("data-state", "still");
-        //     }
+            $('<div>').text(state);
+            if (state === "still"){
+                $(this).attr("src", $(this).attr("gif-animate"));
+                $(this).attr("data-state", "animate");
+            } else{
+               $(this).attr("src", $(this).attr("gif-still"));
+               $(this).attr("data-state", "still");
+            }
         
-        // });
+        });
     });
     
     
