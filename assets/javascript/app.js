@@ -1,9 +1,8 @@
 // Event Listener
-$(document).ready (function(){
-    // this will now work because the div with a class of container will always exist. Anyway I'm going to collapse now lol
+$(document).ready (function(){ 
     
-    // $("button[data-mood]").on("click", function(){
-    // one last thing (before my laptop dies). This listener will NOT work for buttons that haven't been created at page load. The reason is listeners only get attached once. The way we fix this is by targetting a parent element of the elements we want to target, and then delegating to the elements we want to click (since the parent element will be expected to always exist on the page). So the way we fix it is by keeping the selector we have here, but moving it
+    //  $("button[data-mood]").on("click", function(){
+    
     // Inital Array of Moods
 
     
@@ -87,4 +86,4 @@ $(document).ready (function(){
     $('#add-mood').click(function(event) {
         event.preventDefault();
     });
- 
+// });
