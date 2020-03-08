@@ -21,9 +21,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
-    <!--Link for jQuery CDN-->
+<!--Link for jQuery CDN-->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     
@@ -34,21 +35,14 @@
         
     <h6> Click on a Mood Button that best describes your mood at this moment. If you don't see your mood, add one that suits you! </h6>
 
-    <button data-mood="Excited"> Excited</button>
-    <button data-mood="Calm"> Calm</button>
-    <button data-mood="Perplexed"> Perplexed</button>
-    <button data-mood="Mind-Blown"> Mind-Blown</button>
-    <button data-mood="Livid"> Livid</button>
-
+      <!--Moods will get dumped here-->
+      <div id= "mood-view"></div>    
+    
     <div data-gif = "0" id = "gifs-appear-here">
     </div>
     
         <div class = "row">
             <div class "col-lg-9 container-fluid"> 
-
-    <!--Moods will get dumped here-->
-            <div id= "mood-view"></div>    
-        </div>
 
     <!--Form - Instructs users to click a mood-->
 
@@ -57,12 +51,13 @@
         <input type= "text" class="form-control col-12" id = "mood-input"><br>
 
     <!--Trigger Buttons for a new mood to be added-->
+
         <input class="btn btn-info" id="add-mood" type = "submit" value="Add Your Mood!">
     </form>
     </div>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type = "text/javascript" src="../gifTastic/assets/javascript/app.js"></script>
 
 </body>

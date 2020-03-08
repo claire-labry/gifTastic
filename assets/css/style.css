@@ -1,18 +1,15 @@
 *{
     font-family: 'Roboto Mono', monospace;
-    color: black;
 }
 
-body{
-    background-color: rgb(56, 151, 119);
-}
-
-.container{
-    margin: 50px;
+body {
+    background-image: url("../images/giftasticmoods.jpg");
 }
 
 
-#mood-form{
 
-    margin: 50px;
+.buttons {
+    border-radius: 25px;
+    border: 2px solid  black;
+    padding: 10px;
 }
