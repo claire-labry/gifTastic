@@ -13,7 +13,7 @@ $(document).ready (function(){
         
         var mood = $(this).attr("data-name");
        
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + mood + "&api_key=xad35A896cDISepiqaz8yXBCdntcOXQ9&limit=10"
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + mood + "&api_key=xad35A896cDISepiqaz8yXBCdntcOXQ9&limit=10"
         console.log(mood);
         
         $.ajax({
