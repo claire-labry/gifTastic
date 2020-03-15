@@ -14,7 +14,7 @@ body {
 
 #mood-view {
     border-radius: 25px;
-    border: 2px solid  black;
+    border: 2px solid white;
     padding: 10px;
 }
 
@@ -27,6 +27,7 @@ body {
     width: 100%;
     padding: 20px;
     display: table;
+    margin-bottom: 20px;
   }
   
   /* Clear floats after image containers */

@@ -72,28 +72,26 @@ $(document).ready (function(){
               });
         
               renderButtons();
+          
+        function gifPlay(){
+
+            var state = $(this).attr("data-state");
     
-    
-        var states = $(this).attr("data-state");
-    
-        $('<div>').click(function(){
-            var index = parseInt($(this).attr("data-state"));
-            var state = states[index];
-    
-            $('<div>').text(state);
             if (state === "still"){
-                $(this).attr("src", $(this).attr("gif-animate"));
-                $(this).attr("data-state", "animate");
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
             } else{
-               $(this).attr("src", $(this).attr("gif-still"));
-               $(this).attr("data-state", "still");
+               $(this).attr("src", $(this).attr("data-animate"));
+               $(this).attr("data-state", "animate");
             }
+        }
+        $(document).on("click", ".animate-gif", gifPlay);
+    }); 
         
-        });
-    });
     
+
     
     $('#add-mood').click(function(event) {
         event.preventDefault();
-    });
-// });
+    
+});
