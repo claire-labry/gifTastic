@@ -4,6 +4,7 @@
 
 body {
     background-image: url("../images/giftasticmoods.jpg");
+    background-position: 90%;
 }
 
 #mood-form{
